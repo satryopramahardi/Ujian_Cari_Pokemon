@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Pokedex</title>
+
+</head>
+
+<body>
+    <div class="container .mx-auto">
+      <div class="col">
+        <div class="row" style="width: 50%; text-align: center">
+    <h1><b>{{ result['name'] | capitalize}}</b></h1></div>
+    <div class="row .mx-auto"> 
+    <h4><img width='200' height="200" src=" {{ result['sprites']['front_default'] }}"/></h4>
+    </div>
+    <div class="row .mx-auto" style="width: 50%; text-align: center">
+        <ul class="list-group">
+            <li class="list-group-item"><h4>Height: <b>{{ result['height']/10 }}</b> m</h4></li>
+            <li class="list-group-item"><h4>Weight: <b>{{ result['weight']/10 }}</b> kg</h4></li>
+      <li class="list-group-item active" ><a style="color: white;" href="{{ url_for('home') }}"><b>Back</b></a></li>
+</div>
+    </div></div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
